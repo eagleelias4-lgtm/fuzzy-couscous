@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onyo la Scams | Winning Spirit Cyber Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">🛡️ Winning Spirit Cyber Academy</h1>
+            <nav>
+                <a href="index.html" id="nav-home">Nyumbani</a>
+                <a href="recover.html" id="nav-recover">Kurejesha Akaunti</a>
+                <a href="protect.html" id="nav-protect">Kulinda Akaunti</a>
+                <a href="scams.html" class="active" id="nav-scams">Onyo la Scams</a>
+                <a href="kuhusu.html" id="nav-about">Kuhusu</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch" aria-label="Language switcher">
+                    <button class="lang-btn active" data-lang="sw" type="button">SW</button>
+                    <button class="lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2 id="page-title">Onyo la Scams & Wadanganyifu</h2>
+            <p id="page-subtitle">Wajue jinsi wanavyofanya kazi ili usianguke.</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+
+            <div class="alert danger">
+                <strong>Kanuni ya Dhahabu:</strong>
+                Hakuna mtu anayeruhusiwa kukuomba password, recovery code, OTP, au kukuambia u-link akaunti yako ili "kurejesha". Hiyo ni wizi.
+            </div>
+
+            <h3>Aina za Scams Zinazoenea</h3>
+
+            <div class="step-box">
+                <strong>1. "Recovery Expert" / "Instagram Support"</strong><br>
+                Mtu anakutumia DM au WhatsApp akisema anaweza kurejesha akaunti yako kwa malipo (Tsh 20,000 – 100,000+).  
+                Anakuomba login details, recovery code, au kukuambia uwasilishe video selfie kwake.  
+                <em>Matokeo:</em> Anakuchukua akaunti kabisa.
+            </div>
+
+            <div class="step-box">
+                <strong>2. Fake Instagram / Facebook Support</strong><br>
+                Email au ujumbe unaoonekana kutoka Instagram ukisema akaunti yako itafungwa isipokuwa "thibitishe" kwa kubonyeza link.  
+                Link hiyo inakupeleka kwenye tovuti bandia inayofanana na Instagram.
+            </div>
+
+            <div class="step-box">
+                <strong>3. "Account will be disabled"</strong><br>
+                Ujumbe wa kutisha: "Akaunti yako itafungwa ndani ya masaa 24 isipokuwa..."  
+                Wanalenga kukuogopesha ili ubonyeze link haraka.
+            </div>
+
+            <div class="step-box">
+                <strong>4. Free Followers / Likes Apps</strong><br>
+                Apps zinazoahidi followers bure. Unapowaacha login, wanachukua akaunti yako.
+            </div>
+
+            <div class="step-box">
+                <strong>5. Romance / Giveaway Scams</strong><br>
+                Mtu anakutumia ujumbe akisema umeshinda zawadi au anapenda kazi yako, kisha anaomba ufungue link au utume pesa.
+            </div>
+
+            <h3>Jinsi ya Kujilinda</h3>
+            <ul>
+                <li>Usilipie mtu yeyote anayetoa huduma ya "kurejesha akaunti".</li>
+                <li>Usitume password, OTP, recovery code, au video selfie kwa mtu yeyote.</li>
+                <li>Angalia daima anwani ya tovuti (instagram.com si instagrarn.com au instagram-support.com).</li>
+                <li>Ikiwa unashaka, fungua app ya Instagram/Facebook moja kwa moja badala ya kufuata link.</li>
+                <li>Ripoti akaunti za scammers.</li>
+            </ul>
+
+            <h3>Ikiwa Tayari Umeanguka</h3>
+            <ol>
+                <li>Badilisha password za email na akaunti zote mara moja.</li>
+                <li>Washa 2FA kila mahali.</li>
+                <li>Fuata mwongozo wa <a href="recover.html">Kurejesha Akaunti</a>.</li>
+                <li>Ripoti tukio kwa polisi ikiwa umepoteza pesa.</li>
+            </ol>
+
+            <div class="alert">
+                <strong>Kumbuka:</strong>
+                Instagram, Facebook, Meta, TikTok na X <strong>hawawasiliani nawe</strong> kupitia WhatsApp, Telegram, au DM za kibinafsi ili kurejesha akaunti. Wanaweza tu kutuma email rasmi.
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Winning Spirit Cyber Academy. Tovuti hii ni ya elimu tu. Sisi si sehemu ya Meta, Instagram, Facebook wala TikTok.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            sw: {
+                'nav-home': 'Nyumbani',
+                'nav-recover': 'Kurejesha Akaunti',
+                'nav-protect': 'Kulinda Akaunti',
+                'nav-scams': 'Onyo la Scams',
+                'nav-about': 'Kuhusu',
+                'page-title': 'Onyo la Scams & Wadanganyifu',
+                'page-subtitle': 'Wajue jinsi wanavyofanya kazi ili usianguke.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-recover': 'Recover Account',
+                'nav-protect': 'Protect Account',
+                'nav-scams': 'Scam Alerts',
+                'nav-about': 'About',
+                'page-title': 'Scam and Fraud Alerts',
+                'page-subtitle': 'Learn how scammers operate so you can avoid falling victim.'
+            }
+        };
+
+        const applyLanguage = (lang) => {
+            const map = translations[lang] || translations.sw;
+            Object.entries(map).forEach(([id, text]) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = text;
+            });
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang-btn').forEach((button) => {
+                button.classList.toggle('active', button.dataset.lang === lang);
+            });
+        };
+
+        const savedLang = localStorage.getItem('akaunti-salama-lang') || 'sw';
+        applyLanguage(savedLang);
+
+        document.querySelectorAll('.lang-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const nextLang = button.dataset.lang;
+                localStorage.setItem('akaunti-salama-lang', nextLang);
+                applyLanguage(nextLang);
+            });
+        });
+    </script>
+</body>
+</html>

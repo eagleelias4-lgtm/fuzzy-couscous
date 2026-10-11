@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinsi ya Kulinda Akaunti | Winning Spirit Cyber Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">🛡️ Winning Spirit Cyber Academy</h1>
+            <nav>
+                <a href="index.html" id="nav-home">Nyumbani</a>
+                <a href="recover.html" id="nav-recover">Kurejesha Akaunti</a>
+                <a href="protect.html" class="active" id="nav-protect">Kulinda Akaunti</a>
+                <a href="scams.html" id="nav-scams">Onyo la Scams</a>
+                <a href="kuhusu.html" id="nav-about">Kuhusu</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switch" aria-label="Language switcher">
+                    <button class="lang-btn active" data-lang="sw" type="button">SW</button>
+                    <button class="lang-btn" data-lang="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2 id="page-title">Jinsi ya Kulinda Akaunti Zako</h2>
+            <p id="page-subtitle">Fanya checklist hii sasa ili uzuie wizi wa akaunti.</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+
+            <h3>Checklist ya Usalama (Fanya Leo)</h3>
+            <ul class="checklist">
+                <li><strong>Washa Two-Factor Authentication (2FA)</strong> kwenye Instagram, Facebook, WhatsApp, TikTok, X, Gmail, n.k.</li>
+                <li><strong>Tumia password yenye nguvu na unique</strong> — angalau herufi 12, mchanganyiko wa herufi, namba na alama. Usitumie password ile ile mahali pengi.</li>
+                <li><strong>Tumia Password Manager</strong> (kama Bitwarden, 1Password, au Google Password Manager) ili uweze kuweka password tofauti kwa kila akaunti.</li>
+                <li><strong>Angalia Login Activity</strong> mara kwa mara (Settings → Security → Where you're logged in) na uondoe devices usizozijua.</li>
+                <li><strong>Ondoa Third-Party Apps</strong> usizozitumii (Apps and Websites / Connected Apps).</li>
+                <li><strong>Hakikisha email na namba ya simu</strong> kwenye akaunti ni sahihi na unazo access.</li>
+                <li><strong>Usibonyeze links za ajabu</strong> kutoka email, SMS, au DM — hata kama zinaonekana kutoka Instagram/Facebook.</li>
+                <li><strong>Washa alerts</strong> za login na mabadiliko ya email/password.</li>
+            </ul>
+
+            <h3>Jinsi ya Kuweka 2FA (Muhimu Zaidi)</h3>
+            
+            <div class="step-box">
+                <strong>Instagram / Facebook:</strong><br>
+                Settings → Accounts Center → Password and security → Two-factor authentication → Chagua Authentication App (inapendekezwa) au SMS.
+            </div>
+
+            <div class="step-box">
+                <strong>WhatsApp:</strong><br>
+                Settings → Account → Two-step verification → Weka PIN ya tarakimu 6.
+            </div>
+
+            <div class="step-box">
+                <strong>Gmail / Google:</strong><br>
+                myaccount.google.com → Security → 2-Step Verification.
+            </div>
+
+            <h3>Password Yenye Nguvu</h3>
+            <p>Password nzuri:</p>
+            <ul>
+                <li>Ina angalau herufi 12–16</li>
+                <li>Ina herufi kubwa + ndogo + namba + alama (!@#$%)</li>
+                <li>Sio jina lako, tarehe ya kuzaliwa, au neno rahisi</li>
+                <li>Tofauti kwa kila akaunti</li>
+            </ul>
+            <p><strong>Mfano mzuri:</strong> <code>Ng0mbe#2026Salama!</code> (usitumie hii, tengeneza yako)</p>
+
+            <h3>Jinsi ya Kuepuka Phishing</h3>
+            <ul>
+                <li>Instagram haitakuomba password kupitia DM au email.</li>
+                <li>Angalia anwani ya email kwa makini (security@mail.instagram.com ni sahihi).</li>
+                <li>Usibonyeze link yoyote inayokuambia "akaunti yako itafungwa" au "thibitisha sasa".</li>
+                <li>Ikiwa unashaka, fungua app ya Instagram moja kwa moja badala ya kufuata link.</li>
+            </ul>
+
+            <div class="alert">
+                <strong>Kidokezo cha Ziada:</strong>
+                Weka backup codes za 2FA mahali salama (sio kwenye simu ile ile). Ikiwa utapoteza simu, bado utaweza kuingia.
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Winning Spirit Cyber Academy. Tovuti hii ni ya elimu tu.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            sw: {
+                'nav-home': 'Nyumbani',
+                'nav-recover': 'Kurejesha Akaunti',
+                'nav-protect': 'Kulinda Akaunti',
+                'nav-scams': 'Onyo la Scams',
+                'nav-about': 'Kuhusu',
+                'page-title': 'Jinsi ya Kulinda Akaunti Zako',
+                'page-subtitle': 'Fanya checklist hii sasa ili uzuie wizi wa akaunti.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-recover': 'Recover Account',
+                'nav-protect': 'Protect Account',
+                'nav-scams': 'Scam Alerts',
+                'nav-about': 'About',
+                'page-title': 'How to Protect Your Accounts',
+                'page-subtitle': 'Complete this checklist today to reduce the risk of account theft.'
+            }
+        };
+
+        const applyLanguage = (lang) => {
+            const map = translations[lang] || translations.sw;
+            Object.entries(map).forEach(([id, text]) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = text;
+            });
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang-btn').forEach((button) => {
+                button.classList.toggle('active', button.dataset.lang === lang);
+            });
+        };
+
+        const savedLang = localStorage.getItem('akaunti-salama-lang') || 'sw';
+        applyLanguage(savedLang);
+
+        document.querySelectorAll('.lang-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const nextLang = button.dataset.lang;
+                localStorage.setItem('akaunti-salama-lang', nextLang);
+                applyLanguage(nextLang);
+            });
+        });
+    </script>
+</body>
+</html>
